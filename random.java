@@ -26,17 +26,17 @@ Salida: Luego de restar 45 a 88 obtuvimos 43 y sumando sus dígitos tenemos siet
 Nota: Utlice solo operaciones de división, resto, y concatenación para manejar los dígitos del número. No se debe usar ciclos
 en este ejercicio. */
 
-public class random {
+public class Random {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese un número: ");
-        double nro = scanner.nextDouble();
-        double nroOriginal = nro;
+        int nro = scanner.nextInt();
+        int nroOriginal = nro;
         if (nro < 20 && nro > -1){
             nro *= nro;
             System.out.println("El cuadrado de " + nroOriginal + "es: " + nro);
         } else if (nro > 20 && nro < 41) {
-            nro = Math.sqrt(nro);
+            nro = (int) Math.sqrt(nro);
             System.out.println("La raíz cuadrada de " + nroOriginal + "es: " + nro);
         } else if (nro > 40 && nro < 59) {
             if (nro % 2 == 0){
@@ -46,18 +46,15 @@ public class random {
             }
         } else if (nro > 60 && nro < 79) {
             //Intercambia los digitos del nro teniendo en cuenta que siempre se pasa un nro de 2 cifras.
-            double nuevo = 0;
-            while(nro > 0){
-                double dig = nro % 10;
-                nro /= 10;
-                nuevo = (dig*10)+ nro;
-            }
-            System.out.println("El nuevo nro es: " + nuevo);
+            int decenas = nro / 10;
+            int unidades = nro % 10;
+            int nuevoNumero = unidades * 10 + decenas;
+            System.out.println("El número cambió sus dígitos a " + nuevoNumero);
         } else if (nro > 80 && nro < 100) {
             nro -= 45;
             double nuevo = 0;
             while (nro > 0){
-                double dig = nro % 10;
+                int dig = nro % 10;
                 nro /= 10;
                 nuevo = dig + nro;
             }
