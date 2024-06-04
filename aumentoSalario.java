@@ -14,20 +14,20 @@ public class aumentoSalario {
         int edad = scanner.nextInt();
         System.err.println("Ingrese su sueldo anual: ");
         double sueldoAnual = scanner.nextDouble();
-        double sueldoOriginal = sueldoAnual;
+        double aumento = 0;
         if (edad >= 20 && sueldoAnual <= 30000) {
-            sueldoAnual += sueldoOriginal*2/100;
+            aumento = sueldoAnual*2/100;
             recibeAumento = true;
         } else if (edad >= 25 && sueldoAnual <= 40000) {
-            sueldoAnual += sueldoOriginal*5/100;
+            aumento = sueldoAnual*5/100;
             recibeAumento = true;
         } else if (edad >= 30 && sueldoAnual <= 50000){
-            sueldoAnual += sueldoOriginal*10/100;
+            aumento = sueldoAnual*10/100;
             recibeAumento = true;
         } 
 
         if (recibeAumento = true){
-            System.out.println("Usted es elegible para un aumento de sueldo. Su sueldo es: " + sueldoAnual);
+            System.out.println("Usted es elegible para un aumento de sueldo. Su aumento es: " + aumento);
         } else {
             System.out.println("Usted no es elegible para un aumento de sueldo.");
         }
