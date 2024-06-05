@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class caracter {
     public static void main (String [] args){
         Scanner scanner = new Scanner (System.in);
-        System.out.println("Ingrese una caracter: ");
+        System.out.println("Ingrese un caracter: ");
         String caracter = scanner.nextLine();
         if ( "a".equals(caracter) 
         || "e".equals(caracter) 
@@ -14,7 +14,7 @@ public class caracter {
         || "u".equals(caracter)){
             System.out.println(caracter + " es vocal.");
         } else {
-            System.out.println(caracter + "es consonante.");
+            System.out.println(caracter + " es consonante.");
         }
     }
 }
